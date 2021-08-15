@@ -8,16 +8,29 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import {APP_BASE_HREF} from '@angular/common';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { GameSearchComponent } from './components/game-search/game-search.component';
 
 @NgModule({
+  imports: [
+    BrowserModule, 
+    FormsModule, 
+    AppRoutingModule, 
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+  ],
   declarations: [
     AppComponent,
     GamesComponent,
     GameDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    GameSearchComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'}
     // no need to place any providers due to the `providedIn` flag...
