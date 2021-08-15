@@ -7,13 +7,15 @@ import { GameDetailComponent } from './components/game-detail/game-detail.compon
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import {APP_BASE_HREF} from '@angular/common';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesComponent,
     GameDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [
