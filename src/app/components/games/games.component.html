@@ -1,0 +1,91 @@
+<!-- <div>
+  <h2>
+    <span style="font-weight: bold; font-size:0.8em;">
+      {{game.name | uppercase}}
+    </span>
+    Details
+  </h2>
+  <h4>Desired Name is {{game.desiredName}}</h4> -->
+
+
+<!-- Exclude below -->
+<!-- <div>
+    <span>id: </span>
+    {{game.id}}
+  </div>
+  <div>
+    <span>online: </span>
+    {{game.online}}
+  </div>
+  <div>
+    <span>Year of release: </span>
+    {{game.releaseDate}}
+  </div> -->
+
+
+<!--
+  <ul style="list-style: none;">
+    <li>id: <span>{{game.id}}</span></li>
+    <li>
+      Online:
+      <span *ngIf="game.online; else gameNotOnline">
+        Yes
+      </span>
+      <ng-template #gameNotOnline>No</ng-template>
+    </li>
+    <li>Year of release: <span>{{game.releaseDate}}</span></li>
+    <li>
+      Desired name:
+      <input id="desiredName" [(ngModel)]="game.desiredName" />
+    </li>
+  </ul>
+</div>
+<div>
+  <h1>List of games</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Is Online?</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games">
+        <td>{{game.id}}</td>
+        <td>{{game.name}}</td>
+        <ng-template [ngIf]="game.online" [ngIfElse]="notOnline">
+          <td>
+            Yes
+          </td>
+        </ng-template>
+        <ng-template #notOnline>
+          <td>
+            No
+          </td>
+        </ng-template>
+        <td>{{game.releaseDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+-->
+<h2>My Games</h2>
+<ul class="games">
+  <li *ngFor="let game of games" [class.selected]="game === selectedGame" (click)="onSelect(game)">
+    <span class="badge">{{game.id}}</span> {{game.name}}
+  </li>
+</ul>
+
+<app-game-detail [game]="selectedGame"></app-game-detail>
+<!-- <div *ngIf="selectedGame">
+
+  <h2>{{selectedGame.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedGame.id}}</div>
+  <div>
+    <label for="hero-name">Game name: </label>
+    <input id="hero-name" [(ngModel)]="selectedGame.name" placeholder="name">
+  </div>
+
+</div> -->
