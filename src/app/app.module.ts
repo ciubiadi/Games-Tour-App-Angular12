@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { GamesComponent } from './components/games/games.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,9 @@ import { MessagesComponent } from './components/messages/messages.component';
     GameDetailComponent,
     MessagesComponent
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [
+    {provide: APP_BASE_HREF, useValue: '/'}
     // no need to place any providers due to the `providedIn` flag...
   ],
   bootstrap: [AppComponent]
