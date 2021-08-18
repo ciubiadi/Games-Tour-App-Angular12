@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+# Small Description Brief
+
+v1.1 : First version of MEAN stack. In other words, this version is the first master stable version with MongoDB, NodeJS and Express integrates.
+
 # Angular12TourGamesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
