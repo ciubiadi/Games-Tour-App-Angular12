@@ -4,7 +4,7 @@ label {
     font-size: 1.2rem;
     margin-top: 1rem;
     margin-bottom: .5rem;
-  
+
   }
   input {
     padding: .5rem;
@@ -13,11 +13,11 @@ label {
     box-sizing: border-box;
     display: block;
   }
-  
+
   input:focus {
     outline: #336699 auto 1px;
   }
-  
+
   li {
     list-style-type: none;
   }
@@ -33,12 +33,12 @@ label {
     text-decoration: none;
     color: black;
   }
-  
+
   .search-result li a:hover {
     background-color: #435A60;
     color: white;
   }
-  
+
   ul.search-result {
     margin-top: 0;
     padding-left: 0;

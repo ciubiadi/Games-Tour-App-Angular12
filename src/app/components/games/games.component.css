@@ -73,9 +73,7 @@ input {
 }
 
 button.delete {
-  position: absolute;
-  left: 210px;
-  top: 5px;
+float: right;
   background-color: white;
   color:  #525252;
   font-size: 1.1rem;
@@ -85,4 +83,8 @@ button.delete {
 button.delete:hover {
   background-color: #525252;
   color: white;
+}
+
+.games li {
+  width: 150%;
 }
